@@ -1,26 +1,57 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Squareme</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="assets/plugins/summernote/summernote-bs4.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="hold-transition sidebar-mini sidebar-collapse">
+
+<body class="hold-transition sidebar-mini sidebar-collapse mat-typography">
   <app-root></app-root>
   <!-- jQuery -->
-<script src="assets/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="assets/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="assets/dist/js/demo.js"></script>
+  <script src="assets/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/plugins/cooltype/jquery.coolType.js"></script>
+  <!-- AdminLTE App -->
+  <script src="assets/dist/js/adminlte.min.js"></script>
+  <script src="assets/plugins/summernote/summernote-bs4.min.js"></script>
+  <script src="assets/plugins/codemirror/codemirror.js"></script>
+  <script src="assets/plugins/codemirror/mode/css/css.js"></script>
+  <script src="assets/plugins/codemirror/mode/xml/xml.js"></script>
+  <script src="assets/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="assets/dist/js/demo.js"></script>
+  <script>
+    $(function () {
+      // Summernote
+      $('#summernote').summernote({
+        height: 500,   //set editable area's height
+        codemirror: { // codemirror options5
+        theme: 'monokai'
+      }
+    });
+
+      // CodeMirror
+      // CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+      //   mode: "htmlmixed",
+      //   theme: "monokai"
+      // });
+    })
+  </script>
 </body>
+
 </html>
